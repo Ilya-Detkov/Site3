@@ -97,7 +97,7 @@ $(document).ready(function(){
 
   $('input[type="tel"]').inputmask({ "mask": "+7 (999) 999-9999" });
 
-			$('.popup').each(function () {
+			$('form').each(function () {
 				$(this).validate({
 					// errorPlacement(error, element) {
 					// 	return true;
@@ -123,7 +123,7 @@ $(document).ready(function(){
 					let th = $(form);
 
 					$.ajax({
-					type: 'POST',
+					type: 'GET',
 					url: 'mail.php',
 					data: th.serialize(),
 				}).done(() => {
