@@ -123,7 +123,7 @@ $(document).ready(function(){
 					let th = $(form);
 
 					$.ajax({
-					type: 'GET',
+					type: 'POST',
 					url: 'mail.php',
 					data: th.serialize(),
 				}).done(() => {
