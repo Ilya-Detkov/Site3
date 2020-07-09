@@ -95,50 +95,50 @@ $(document).ready(function(){
 		}
   });
 
-  $('input[type="tel"]').inputmask({ "mask": "+7 (999) 999-9999" });
+  // $('input[type="tel"]').inputmask({ "mask": "+7 (999) 999-9999" });
 
-			$('form').each(function () {
-				$(this).validate({
-					// errorPlacement(error, element) {
-					// 	return true;
-					// },
-					focusInvalid: false,
-					rules: {
-						Телефон: {
-							required: true,
-						},
-						Имя: {
-							required: true,
-						}
-					},
-					messages: {
-						Телефон: {
-							required: 'Нужно что-то ввести'
-						},
-						Имя: {
-							required: 'Нужно что-то ввести',
-						}
-					},
-					submitHandler(form) {
-					let th = $(form);
-				}
-			});
-    });
+	// 		$('form').each(function () {
+	// 			$(this).validate({
+	// 				// errorPlacement(error, element) {
+	// 				// 	return true;
+	// 				// },
+	// 				focusInvalid: false,
+	// 				rules: {
+	// 					Телефон: {
+	// 						required: true,
+	// 					},
+	// 					Имя: {
+	// 						required: true,
+	// 					}
+	// 				},
+	// 				messages: {
+	// 					Телефон: {
+	// 						required: 'Нужно что-то ввести'
+	// 					},
+	// 					Имя: {
+	// 						required: 'Нужно что-то ввести',
+	// 					}
+	// 				},
+	// 				submitHandler(form) {
+	// 				let th = $(form);
+	// 			}
+	// 		});
+  //   });
     
-    //E-mail Ajax Send
-	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
+  //   //E-mail Ajax Send
+	// $("form").submit(function() { //Change
+	// 	var th = $(this);
+	// 	$.ajax({
+	// 		type: "POST",
+	// 		url: "mail.php", //Change
+	// 		data: th.serialize()
+	// 	}).done(function() {
+	// 		alert("Thank you!");
+	// 		setTimeout(function() {
+	// 			// Done Functions
+	// 			th.trigger("reset");
+	// 		}, 1000);
+	// 	});
+	// 	return false;
+	// });
 });
