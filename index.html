@@ -198,12 +198,6 @@
     </footer>
     <div class="popup-container">
         <form class="popup" action="https://formspree.io/mvowwylv" method="POST">
-            <!-- <input type="hidden" name="project_name" value="Site Name">
-            <input type="hidden" name="admin_email" value="vol_92@mail.ru">
-            <input type="hidden" name="form_subject" value="Form Subject"> -->
-            <!-- <input type="text" name="name"> -->
-            <!-- <input type="email" name="_replyto"> -->
-            <!-- <input type="submit" value="Send"> -->
             <a class="popup-close" href="#">
                 <img class="popup-svg" src="img/close.png" alt=""></img>
             </a>
@@ -217,8 +211,7 @@
                 <span>Номер телефона:</span>
                 <input type="tel" name="Телефон" placeholder="+7 (___) ___-__-__">
             </label>
-            <!-- <button class="popup__button" type="submit">Заказать звонок</button> -->
-            <input class="popup__button" type="submit" value="Send">
+            <input class="popup__button" type="submit" value="Заказать звонок">
         </form>
     </div>
     <div class="popup__thanks-container">
@@ -237,9 +230,9 @@
       
           // get the form elements defined in your form HTML above
           
-          var form = document.getElementById("my-form");
-          var button = document.getElementById("my-form-button");
-          var status = document.getElementById("my-form-status");
+          var form = document.getElementById("popup");
+          var button = document.getElementById("popup__button");
+          var status = document.getElementById("popup__thanks");
       
           // Success and Error functions for after the form is submitted
           
