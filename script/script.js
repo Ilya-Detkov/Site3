@@ -97,6 +97,7 @@ $(document).ready(function(){
   });
 
   $('.popup-close, .popup__thanks-close').on('click', function(event){
+    event.preventDefault();
     $('.popup-container, .popup__thanks-container').fadeOut(1000);
 		$("body").removeClass("fixed");
   });
@@ -116,6 +117,7 @@ $(document).ready(function(){
   });
 
   $('.popup-close, .popup__thanks-close').on('click', function(event){
+    event.preventDefault();
     $('.popup-container2, .popup__thanks-container').fadeOut(1000);
 		$("body").removeClass("fixed");
   });
