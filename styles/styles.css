@@ -71,8 +71,11 @@ address {
     position: fixed;
     right: 40px;
     bottom: 40px;
-    transform: rotate(90deg);
-    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.08);
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.08);
     border-radius: 50%;
     height: 50px;
     width: 50px;
@@ -85,7 +88,10 @@ address {
     width: 57px;
     right: 40px;
     bottom: 42px;
-    box-shadow: 0px 0px 20px 0px #ff4e2e;
+    -webkit-box-shadow: 0px 0px 20px 0px #ff4e2e;
+            box-shadow: 0px 0px 20px 0px #ff4e2e;
+    -webkit-transition: all  0.1s;
+    -o-transition: all  0.1s;
     transition: all  0.1s;
 }
 
@@ -105,18 +111,22 @@ address {
     padding: 0 40px;
     margin: 0 auto;
 }
-.header-burger{
-}
 .header-burger.active:before{
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
     top: 5px;
     }
     .header-burger.active:after{
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
     bottom: 9px;
     }
     .header-burger.active span{
-    transform: scale(0);
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
     }
 .menu{
     display: -webkit-inline-box;
@@ -126,6 +136,8 @@ address {
 }
 .menu.active{
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -174,18 +186,25 @@ address {
     background: #fbfbfb;
 }
 .button-call:hover{
+    -webkit-transition: all  0.3s;
+    -o-transition: all  0.3s;
     transition: all  0.3s;
-    box-shadow: 0px 1px 10px 0px #ff2700;
+    -webkit-box-shadow: 0px 1px 10px 0px #ff2700;
+            box-shadow: 0px 1px 10px 0px #ff2700;
 }
 .button-call:active{
     background: #ff4e2e;
     color: #fff;
 }
 .header__wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .header__text-column{
-    flex: 1 1 auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
 }
 .header__info-title{
     font-family: 'Roboto-Black', Arial, sans-serif;
@@ -215,39 +234,53 @@ address {
     cursor: pointer;
 }
 .button-info:hover {
+    -webkit-transition: all  0.3s;
+    -o-transition: all  0.3s;
     transition: all  0.3s;
-    box-shadow: 0px 1px 10px 0px #ff2700;
+    -webkit-box-shadow: 0px 1px 10px 0px #ff2700;
+            box-shadow: 0px 1px 10px 0px #ff2700;
 }
 .button-info:active{
     background: #fff;
     color: #ff4e2e;
 }
 .header__picture-column{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    transform: translate(81px);
+    -webkit-transform: translate(81px);
+        -ms-transform: translate(81px);
+            transform: translate(81px);
     padding-top: 28px;
 }
-.header__photo{
- 
-}
-.header__animation{
-
-}
-
-
-
 .animation__item22{
     font-size: 48px;
-    transform: rotate(27deg);
-    animation: conditions-decore 2s 0.2s infinite alternate;
-    animation-name: header-animation22;
+    -webkit-transform: rotate(27deg);
+        -ms-transform: rotate(27deg);
+            transform: rotate(27deg);
+    -webkit-animation: conditions-decore 2s 0.2s infinite alternate;
+            animation: conditions-decore 2s 0.2s infinite alternate;
+    -webkit-animation-name: header-animation22;
+            animation-name: header-animation22;
+}
+@-webkit-keyframes header-animation22{
+    0%{
+        -webkit-transform: translate3d(15%, 0, 0) rotateZ(10deg);
+                transform: translate3d(15%, 0, 0) rotateZ(10deg);
+    }
+    100%{
+        -webkit-transform: translate3d(-15%, 0, 0) rotateZ(-10deg);
+                transform: translate3d(-15%, 0, 0) rotateZ(-10deg);
+    }
 }
 @keyframes header-animation22{
     0%{
-        transform: translate3d(15%, 0, 0) rotateZ(10deg);
+        -webkit-transform: translate3d(15%, 0, 0) rotateZ(10deg);
+                transform: translate3d(15%, 0, 0) rotateZ(10deg);
     }
     100%{
-        transform: translate3d(-15%, 0, 0) rotateZ(-10deg);
+        -webkit-transform: translate3d(-15%, 0, 0) rotateZ(-10deg);
+                transform: translate3d(-15%, 0, 0) rotateZ(-10deg);
     }
 }
 
@@ -255,57 +288,88 @@ address {
 .animation{
     display: inline-block;
     position: absolute;
+    background: -webkit-gradient(linear,left top, left bottom,from(#fa0891),to(#f3582e));
+    background: -o-linear-gradient(top,#fa0891,#f3582e);
     background: linear-gradient(to bottom,#fa0891,#f3582e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
 }
 .animation__item1{
     font-size: 48px;
-    transform: rotate(27deg);
+    -webkit-transform: rotate(27deg);
+        -ms-transform: rotate(27deg);
+            transform: rotate(27deg);
     top: 132px;
     left: 122px;
-    animation-name: header-animation1;
+    -webkit-animation-name: header-animation1;
+            animation-name: header-animation1;
 }
 .animation__item2{
     font-size: 30px;
-    transform: rotate(-13deg);
+    -webkit-transform: rotate(-13deg);
+        -ms-transform: rotate(-13deg);
+            transform: rotate(-13deg);
     top: 163px;
     left: 779px;
-    animation-name: header-animation2;
+    -webkit-animation-name: header-animation2;
+            animation-name: header-animation2;
 }
 .animation__item3{
     font-size: 37.5px;
     font-weight: bold;
-    transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+            transform: rotate(20deg);
     bottom: 337px;
     right: 872px;
-    animation-name: header-animation3;
+    -webkit-animation-name: header-animation3;
+            animation-name: header-animation3;
 }
 .animation__item4{
     font-size: 57px;
     font-weight: bold;
-    transform: rotate(16deg);
+    -webkit-transform: rotate(16deg);
+        -ms-transform: rotate(16deg);
+            transform: rotate(16deg);
     left: 238px;
     top: 360px;
-    animation-name: header-animation4;
+    -webkit-animation-name: header-animation4;
+            animation-name: header-animation4;
 }
 .animation__item5{
     font-size: 41px;
     font-weight: bold;
-    transform: rotate(-22deg);
+    -webkit-transform: rotate(-22deg);
+        -ms-transform: rotate(-22deg);
+            transform: rotate(-22deg);
     left: 368px;
     bottom: 205px;
-    animation-name: header-animation5;
+    -webkit-animation-name: header-animation5;
+            animation-name: header-animation5;
 }
 .animation__item6{
     display: none;
     font-size: 45px;
     font-weight: bold;
-    transform: rotate(13deg);
+    -webkit-transform: rotate(13deg);
+        -ms-transform: rotate(13deg);
+            transform: rotate(13deg);
     left: 422px;
     bottom: 543px;
-    animation-name: header-animation6;
+    -webkit-animation-name: header-animation6;
+            animation-name: header-animation6;
+}
+@-webkit-keyframes header-animation1{
+    0%{
+        top: 243px;
+        left: 397px;
+    }
+    100%{
+        top: 132px;
+        left: 122px;
+    }
 }
 @keyframes header-animation1{
     0%{
@@ -315,6 +379,16 @@ address {
     100%{
         top: 132px;
         left: 122px;
+    }
+}
+@-webkit-keyframes header-animation2{
+    0%{
+        top: 284px;
+        left: 601px;
+    }
+    100%{   
+        top: 163px;
+        left: 779px;
     }
 }
 @keyframes header-animation2{
@@ -327,6 +401,16 @@ address {
         left: 779px;
     }
 }
+@-webkit-keyframes header-animation3{
+    0%{
+        bottom: 431px;
+        right: 1093px;
+    }
+    100%{
+        bottom: 337px;    
+        right: 872px;
+    }
+}
 @keyframes header-animation3{
     0%{
         bottom: 431px;
@@ -337,6 +421,16 @@ address {
         right: 872px;
     }
 }
+@-webkit-keyframes header-animation4{
+    0%{
+        left: 335px;
+        top: 360px; 
+    }
+    100%{
+        left: 238px;
+        top: 360px; 
+    }
+}
 @keyframes header-animation4{
     0%{
         left: 335px;
@@ -345,6 +439,16 @@ address {
     100%{
         left: 238px;
         top: 360px; 
+    }
+}
+@-webkit-keyframes header-animation5{
+    0%{
+        left: 624px;
+        bottom: 361px;
+    }
+    100%{
+        left: 368px;
+        bottom: 205px;
     }
 }
 @keyframes header-animation5{
@@ -385,7 +489,9 @@ address {
 
 }
 .main-skills__box{
-    flex: 0 1 22%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 22%;
+            flex: 0 1 22%;
     text-align: center;
 }
 .main-skills__text{
@@ -422,8 +528,12 @@ address {
 }
 /* Лента слайдов */
 .slick-track{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 /* Стрелка */
 .slick-arrow{
@@ -435,7 +545,8 @@ address {
     width: 61px;
     height: 61px;
     border: none;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -448,13 +559,21 @@ address {
 .slick-arrow.slick-next{
     right: 0;
     background: url(../img/portfolio/arrow.png) 0 0 no-repeat;
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
 }
 /* Точки (булиты) */
 .slider .slick-dots{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .slick-dots li{
     list-style: none;
@@ -484,6 +603,8 @@ address {
 /* ---------slider--------- */
 
 .main-aside{
+    background: -webkit-gradient(linear,left bottom, right top,from(#ff8f5a),to(#ff2f96));
+    background: -o-linear-gradient(bottom left,#ff8f5a,#ff2f96);
     background: linear-gradient(to top right,#ff8f5a,#ff2f96);
 }
 .main-aside__title {
@@ -520,14 +641,19 @@ address {
     background: #fff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
     font-family: "Roboto";
     font-weight: bold;
 }
 .animation__item7 {
-    transform: rotate(27deg);
-    animation: conditions-decore 4s 0.2s infinite alternate;
-    animation-name: header-animation7;
+    -webkit-transform: rotate(27deg);
+        -ms-transform: rotate(27deg);
+            transform: rotate(27deg);
+    -webkit-animation: conditions-decore 4s 0.2s infinite alternate;
+            animation: conditions-decore 4s 0.2s infinite alternate;
+    -webkit-animation-name: header-animation7;
+            animation-name: header-animation7;
     bottom: 310px;
     right: 358px;
     font-size: 50px;
@@ -535,9 +661,13 @@ address {
 }
 .animation__item8 {
     font-size: 48px;
-    transform: rotate(-21deg);
-    animation: conditions-decore 1.5s 0.2s infinite alternate;
-    animation-name: header-animation7;
+    -webkit-transform: rotate(-21deg);
+        -ms-transform: rotate(-21deg);
+            transform: rotate(-21deg);
+    -webkit-animation: conditions-decore 1.5s 0.2s infinite alternate;
+            animation: conditions-decore 1.5s 0.2s infinite alternate;
+    -webkit-animation-name: header-animation7;
+            animation-name: header-animation7;
     bottom: 116px;
 
     left: 1231px;
@@ -545,35 +675,60 @@ address {
 }
 .animation__item9 {
     font-size: 37px;
-    transform: rotate(20deg);
-    animation: conditions-decore 2s 0.2s infinite alternate;
-    animation-name: header-animation7;
+    -webkit-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+            transform: rotate(20deg);
+    -webkit-animation: conditions-decore 2s 0.2s infinite alternate;
+            animation: conditions-decore 2s 0.2s infinite alternate;
+    -webkit-animation-name: header-animation7;
+            animation-name: header-animation7;
     bottom: 80px;
     left: 838px;
 }
 .animation__item10 {
     font-size: 55px;
-    transform: rotate(15deg);
-    animation: conditions-decore 1.5s 0.2s infinite alternate;
-    animation-name: header-animation7;
+    -webkit-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+            transform: rotate(15deg);
+    -webkit-animation: conditions-decore 1.5s 0.2s infinite alternate;
+            animation: conditions-decore 1.5s 0.2s infinite alternate;
+    -webkit-animation-name: header-animation7;
+            animation-name: header-animation7;
     bottom: 115px;
     right: 428px;
 }
 .animation__item11 {
     font-size: 38px;
-    transform: rotate(-23deg);
-    animation: conditions-decore 3s 0.2s infinite alternate;
-    animation-name: header-animation7;
+    -webkit-transform: rotate(-23deg);
+        -ms-transform: rotate(-23deg);
+            transform: rotate(-23deg);
+    -webkit-animation: conditions-decore 3s 0.2s infinite alternate;
+            animation: conditions-decore 3s 0.2s infinite alternate;
+    -webkit-animation-name: header-animation7;
+            animation-name: header-animation7;
     bottom: 306px;
     left: 948px;
 }
 
-@keyframes header-animation7{
+@-webkit-keyframes header-animation7{
     0%{
-        transform: translate3d(15%, 0, 0) rotateZ(10deg);
+        -webkit-transform: translate3d(15%, 0, 0) rotateZ(10deg);
+                transform: translate3d(15%, 0, 0) rotateZ(10deg);
     }
     100%{
-        transform: translate3d(-15%, 0, 0) rotateZ(-10deg);
+        -webkit-transform: translate3d(-15%, 0, 0) rotateZ(-10deg);
+                transform: translate3d(-15%, 0, 0) rotateZ(-10deg);
+    }
+}
+
+@keyframes header-animation7{
+    0%{
+        -webkit-transform: translate3d(15%, 0, 0) rotateZ(10deg);
+                transform: translate3d(15%, 0, 0) rotateZ(10deg);
+    }
+    100%{
+        -webkit-transform: translate3d(-15%, 0, 0) rotateZ(-10deg);
+                transform: translate3d(-15%, 0, 0) rotateZ(-10deg);
     }
 }
 
@@ -583,8 +738,11 @@ address {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 45px;
 }
 .footer__left{
@@ -617,11 +775,15 @@ address {
     font-size: 25px;
 }
 .fa{
+    background: -webkit-gradient(linear,left top, left bottom,from(#fa0891),to(#f3582e));
+    background: -o-linear-gradient(top,#fa0891,#f3582e);
     background: linear-gradient(to bottom,#fa0891,#f3582e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .footer__button-box{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-right: 22px;
 }
@@ -629,6 +791,8 @@ address {
     padding: 12px 60px;
 }
 .social-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .social-logo-item {
@@ -657,6 +821,8 @@ address {
 .socials-icon-twitter:hover, 
 .socials-icon-instagram:hover{
     fill:#4b729f;
+    -webkit-transition: all  0.5s;
+    -o-transition: all  0.5s;
     transition: all  0.5s;
 }
 .footer__copyright {
@@ -671,10 +837,14 @@ address {
 .link-hover:hover{
     color: #fc557c;
     border-bottom: 1px solid #fc557c;
+    -webkit-transition: all  0.3s;
+    -o-transition: all  0.3s;
     transition: all  0.3s;
 }
 .link-hover-contacts:hover{
     color: #fc557c;
+    -webkit-transition: all  0.3s;
+    -o-transition: all  0.3s;
     transition: all  0.3s;
 }
 
@@ -685,7 +855,9 @@ address {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,.5);
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     top: 0;
     left: 0;
     z-index: 10;
@@ -693,14 +865,20 @@ address {
 .popup{
 	width: 500px;
 	height: 500px;
+	background: -webkit-gradient(linear,left bottom, right top,from(#ff8f5a),to(#ff2f96));
+	background: -o-linear-gradient(bottom left,#ff8f5a,#ff2f96);
 	background: linear-gradient(to top right,#ff8f5a,#ff2f96);
 	margin: 0 auto;
     padding: 1px 35px 80px 35px;
     border-radius: 10px;
 }
 .popup-close{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     padding-top: 15px;
     cursor: pointer;
     float: right;
@@ -719,10 +897,16 @@ address {
     margin-top: 110px;
 }
 .popup__input {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 100%;
-	justify-content: space-between;
-	align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	margin-bottom: 15px;
 }
 .popup__input span {
@@ -741,6 +925,18 @@ address {
 	font-weight: 400;
 	padding-left: 20px;
 }
+.popup__input input::-webkit-input-placeholder {
+	color: black;
+}
+.popup__input input::-moz-placeholder {
+	color: black;
+}
+.popup__input input:-ms-input-placeholder {
+	color: black;
+}
+.popup__input input::-ms-input-placeholder {
+	color: black;
+}
 .popup__input input::placeholder {
 	color: black;
 }
@@ -750,9 +946,15 @@ address {
 	height: 51px;
 	background-color: #ffffff;
 	border: 1px solid #31293c;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	color: black;
 	font-size: 16px;
 	font-weight: 500;
@@ -760,10 +962,12 @@ address {
     cursor: pointer;
 }
 .fixed{
-    position:fixed;
+    overflow: hidden;
     width: 100%;
 }
 .d-flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 #error-text{
@@ -784,7 +988,9 @@ address {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,.5);
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     top: 0;
     left: 0;
     z-index: 10;
@@ -792,11 +998,15 @@ address {
 .popup__thanks{
     width: 250px;
 	height: 250px;
+	background: -webkit-gradient(linear,left bottom, right top,from(#ff8f5a),to(#ff2f96));
+	background: -o-linear-gradient(bottom left,#ff8f5a,#ff2f96);
 	background: linear-gradient(to top right,#ff8f5a,#ff2f96);
     margin: 0 auto;
     border-radius: 10px;
 }
 .popup__thanks-close{
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     padding: 8px;
     cursor: pointer;
@@ -810,8 +1020,12 @@ address {
     text-align: center;
     font-size: 20px;
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 67%;
     width: 100%;
 }
@@ -823,6 +1037,16 @@ address {
 @media(max-width: 1711px){
     .animation__item4{
         left: 50px;
+    }
+    @-webkit-keyframes header-animation4{
+        0%{
+            left: 300px;
+            top: 360px; 
+        }
+        100%{
+            left: 50px;
+            top: 360px; 
+        }
     }
     @keyframes header-animation4{
         0%{
@@ -852,7 +1076,9 @@ address {
 }
 @media (max-width: 1400px){
     .header__picture-column{
-        transform: translate(-30px);
+        -webkit-transform: translate(-30px);
+            -ms-transform: translate(-30px);
+                transform: translate(-30px);
     }
     .header__info{
     background-position: 126% 200%;
@@ -863,6 +1089,16 @@ address {
     .animation__item5{
         left: 120px;
         bottom: 205px;
+    }
+    @-webkit-keyframes header-animation5{
+        0%{
+            left: 300px;
+            bottom: 361px;
+        }
+        100%{
+            left: 120px;
+            bottom: 205px;
+        }
     }
     @keyframes header-animation5{
         0%{
@@ -882,6 +1118,16 @@ address {
         left: 370px;
         top: 60px;
     }
+    @-webkit-keyframes header-animation4{
+        0%{
+            left: 370px;
+            top: 344px;
+        }
+        100%{
+            left: 370px;
+            top: 60px;
+        }
+    }
     @keyframes header-animation4{
         0%{
             left: 370px;
@@ -890,6 +1136,16 @@ address {
         100%{
             left: 370px;
             top: 60px;
+        }
+    }
+    @-webkit-keyframes header-animation3{
+        0%{
+            bottom: 431px;
+            right: 1093px;
+        }
+        100%{
+            bottom: 234px;
+            right: 761px;
         }
     }
     @keyframes header-animation3{
@@ -905,6 +1161,16 @@ address {
     .animation__item2{
         top: 163px;
         left: 531px;
+    }
+    @-webkit-keyframes header-animation2{
+        0%{
+            top: 310px;
+            left: 418px;
+        }
+        100%{
+            top: 163px;
+            left: 531px;
+        }
     }
     @keyframes header-animation2{
         0%{
@@ -952,7 +1218,9 @@ address {
 }
 @media (max-width: 1149px){
     .header__picture-column {
-        transform: translate(36px);
+        -webkit-transform: translate(36px);
+            -ms-transform: translate(36px);
+                transform: translate(36px);
         padding-top: 55px;
     }
     .header__info {
@@ -964,6 +1232,16 @@ address {
     .animation__item3 {
         bottom: 234px;
         right: 474px;
+    }
+    @-webkit-keyframes header-animation3{
+        0%{
+            bottom: 431px;
+            right: 781px;
+        }
+        100%{
+        bottom: 234px;
+        right: 474px;
+        }
     }
     @keyframes header-animation3{
         0%{
@@ -997,7 +1275,9 @@ address {
 
 @media (max-width: 1024px){
     .header__picture-column {
-        transform: translate(1px);
+        -webkit-transform: translate(1px);
+            -ms-transform: translate(1px);
+                transform: translate(1px);
         padding-top: 10px;
     }
     .header__info {
@@ -1024,10 +1304,13 @@ address {
         font-size: calc(30px + 24 * ((100vw - 320px) / (1024 - 320)));
     }
     .main-skills{
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
     .main-skills__box{
-        flex: 0 1 50%;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 50%;
+                flex: 0 1 50%;
         padding-bottom: 80px;
     }
     .main-skills__box:nth-child(odd){
@@ -1085,6 +1368,8 @@ address {
         padding-top: 16px;
     }
     .header-burger {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         position: relative;
         width: 45px;
@@ -1093,11 +1378,15 @@ address {
     }
     .header-burger span{
         position: absolute;
+        background: -webkit-gradient(linear ,left top, right top ,from(#ff6e6e),to(#ff4886));
+        background: -o-linear-gradient(left ,#ff6e6e,#ff4886);
         background: linear-gradient(to right ,#ff6e6e,#ff4886);
         left: 0;
         width: 100%;
         height: 6px;
         top: 2px;
+        -webkit-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
         transition: all 0.3s ease 0s;
     }
     .header-burger:before,
@@ -1107,29 +1396,40 @@ address {
         width: 100%;
         height: 6px;
         left: 0;
+        -webkit-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
         transition: all 0.3s ease 0s;
     }
     .header-burger:before{
         top: -11px;
+        background: -webkit-gradient(linear ,left top, right top ,from(#ff428a),to(#ff2f96));
+        background: -o-linear-gradient(left ,#ff428a,#ff2f96);
         background: linear-gradient(to right ,#ff428a,#ff2f96);
     }
     .header-burger:after{
         bottom: -2px;
+        background: -webkit-gradient(linear ,left top, right top ,from(#ff8f5a),to(#ff7868));
+        background: -o-linear-gradient(left ,#ff8f5a,#ff7868);
         background: linear-gradient(to right ,#ff8f5a,#ff7868);
     }
     .menu{
         left:-100%;
         top: 93px;
+        -webkit-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
         transition: all 0.3s ease 0s;
         width: 100%;
         height: 100%;
         padding: 0px 0 0 17px;
-        box-shadow: inset 0 10px 20px 0 #efefef;
+        -webkit-box-shadow: inset 0 10px 20px 0 #efefef;
+                box-shadow: inset 0 10px 20px 0 #efefef;
         background-color: white;
         position: absolute;
         z-index: 10;
     }
     .menu .menu li .menu-link{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         margin: 20px 0;
         border-bottom: 1px solid #e5e5e5;
@@ -1148,6 +1448,16 @@ address {
         top: 151px;
         left: 76px;
     }
+    @-webkit-keyframes header-animation1{
+        0%{
+            top: 351px;
+            left: 260px;
+        }
+        100%{
+            top: 151px;
+            left: 76px;
+        }
+    }
     @keyframes header-animation1{
         0%{
             top: 351px;
@@ -1161,6 +1471,16 @@ address {
     .animation__item4 {
         left: 55px;
         top: 626px;
+    }
+    @-webkit-keyframes header-animation4{
+        0%{
+            left: 244px;
+            top: 381px;
+        }
+        100%{
+            left: 55px;
+            top: 626px;
+        }
     }
     @keyframes header-animation4{
         0%{
@@ -1176,6 +1496,16 @@ address {
         top: 148px;
         left: 887px;
     }
+    @-webkit-keyframes header-animation2{
+        0%{
+            top: 348px;
+            left: 287px;
+        }
+        100%{
+            top: 148px;
+            left: 887px;
+        }
+    }
     @keyframes header-animation2{
         0%{
             top: 348px;
@@ -1189,6 +1519,16 @@ address {
     .animation__item5{
         left: 356px;
         bottom: 198px;
+    }
+    @-webkit-keyframes header-animation5{
+        0%{
+            left: 244px;
+            bottom: 361px;
+        }
+        100%{
+            left: 356px;
+            bottom: 198px;
+        }
     }
     @keyframes header-animation5{
         0%{
@@ -1204,6 +1544,16 @@ address {
         bottom: 238px;
         right: 68px;
     }
+    @-webkit-keyframes header-animation3{
+        0%{
+            bottom: 432px;
+            right: 668px;
+        }
+        100%{
+            bottom: 238px;
+            right: 68px;
+        }
+    }
     @keyframes header-animation3{
         0%{
             bottom: 432px;
@@ -1216,6 +1566,16 @@ address {
     }
     .animation__item6{
         display: block;
+    }
+    @-webkit-keyframes header-animation6{
+        0%{
+            left: 237px;
+            bottom: 359px;
+        }
+        100%{
+            left: 422px;
+            bottom: 543px;
+        }
     }
     @keyframes header-animation6{
         0%{
@@ -1264,6 +1624,16 @@ address {
         top: 148px;
         left: 731px;
     }
+    @-webkit-keyframes header-animation2{
+        0%{
+            top: 348px;
+            left: 287px;
+        }
+        100%{
+            top: 148px;
+            left: 731px;
+        }
+    }
     @keyframes header-animation2{
         0%{
             top: 348px;
@@ -1277,6 +1647,16 @@ address {
     .animation__item3{
         bottom: 238px;
         right: 200px;
+    }
+    @-webkit-keyframes header-animation3{
+        0%{
+            bottom: 432px;
+            right: 668px;
+        }
+        100%{
+            bottom: 238px;
+            right: 200px;
+        }
     }
     @keyframes header-animation3{
         0%{
@@ -1319,19 +1699,31 @@ address {
 }
 @media (max-width: 820px){
     .header__wrapper{
-        flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
         padding: 0;
     }
     .header__text-column {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         background-color: #fff;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .header__picture-column {
         padding-top: 60px;
         background: url(../img/bg-header1024.png) no-repeat;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         background-position: -87px -261%;
         background-size: 1100px;
     }
@@ -1362,7 +1754,9 @@ address {
         margin-bottom: 0;
     }
     .slick-track {
-        align-items: normal;
+        -webkit-box-align: normal;
+            -ms-flex-align: normal;
+                align-items: normal;
     }
     .animation__item2{
         display: none;
@@ -1387,7 +1781,8 @@ address {
         top: 151px;
     }
     .animation{
-        animation: none;
+        -webkit-animation: none;
+                animation: none;
     }
     .animation__item7 {
         bottom: 413px;
@@ -1451,7 +1846,10 @@ address {
         line-height: 30px;
     }
     .popup__input{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .popup__input span{
         padding-bottom: 10px;
@@ -1501,7 +1899,9 @@ address {
         margin: 50px 15px;
     }
     .main-skills__box{
-        flex: 0 1 100%;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 100%;
+                flex: 0 1 100%;
     }
     .main-aside__title {
         padding: 50px 0 49px 0;
@@ -1611,7 +2011,9 @@ address {
         padding-top: 17px;
     }
     .header__picture-column{
-        transform: translate(0px);
+        -webkit-transform: translate(0px);
+            -ms-transform: translate(0px);
+                transform: translate(0px);
         padding-left: 60px;
     }
     .header__info-text{
@@ -1735,7 +2137,9 @@ address {
         left: 173px;
         bottom: 724px;
         font-size: 19px;
-        transform: rotate(-31deg);
+        -webkit-transform: rotate(-31deg);
+            -ms-transform: rotate(-31deg);
+                transform: rotate(-31deg);
     }
     .animation__item3 {
         right: 37px;
