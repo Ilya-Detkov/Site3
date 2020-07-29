@@ -1919,6 +1919,10 @@ address {
     .main-aside__text {
         padding-bottom: 50px;
     }
+    .main-button {
+        padding: 19px 72px;
+        font-size: 16px;
+    }
     .wrapper {
         padding: 0 20px;
     }
@@ -2041,10 +2045,6 @@ address {
     }
     .main-skills__text {
         padding-top: 10px;
-        font-size: 16px;
-    }
-    .main-button{
-        padding: 19px 72px;
         font-size: 16px;
     }
     .main-title{
