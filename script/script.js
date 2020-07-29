@@ -73,19 +73,32 @@ $(document).ready(function(){
   };
   window.onscroll = magic;
 
-	$('.button-call, .fa__header-phone').on('click', function(){
+
+
+	$(".popup").submit(function() { 
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", 
+			data: th.serialize()
+		}).done(() => {
+
+      th.trigger('reset');
+    
+		});
+		return false;
+  });
+  
+
+	$('.button-call, .fa__header-phone').on('click', function(event){
+    event.preventDefault();
     $('.popup-container').fadeIn(1000).css( 'display', 'flex' );
-		$("body").addClass("fixed");
+    $("body").addClass("fixed");
   });
 
-  $('.popup-close, .popup__thanks-close').on('click', function(){
+  $('.popup-close, .popup__thanks-close').on('click', function(event){
     $('.popup-container, .popup__thanks-container').fadeOut(1000);
 		$("body").removeClass("fixed");
-  });
-
-  $('.popup__button').on('click', function(){
-    $('.popup__thanks-container').fadeIn(600).css( 'display', 'flex' );
-    $('.popup-container').fadeOut(400);
   });
 
   $('.popup-container, .popup__thanks-container').on('click', function(event){
@@ -95,50 +108,24 @@ $(document).ready(function(){
 		}
   });
 
-  // $('input[type="tel"]').inputmask({ "mask": "+7 (999) 999-9999" });
 
-	// 		$('form').each(function () {
-	// 			$(this).validate({
-	// 				// errorPlacement(error, element) {
-	// 				// 	return true;
-	// 				// },
-	// 				focusInvalid: false,
-	// 				rules: {
-	// 					Телефон: {
-	// 						required: true,
-	// 					},
-	// 					Имя: {
-	// 						required: true,
-	// 					}
-	// 				},
-	// 				messages: {
-	// 					Телефон: {
-	// 						required: 'Нужно что-то ввести'
-	// 					},
-	// 					Имя: {
-	// 						required: 'Нужно что-то ввести',
-	// 					}
-	// 				},
-	// 				submitHandler(form) {
-	// 				let th = $(form);
-	// 			}
-	// 		});
-  //   });
-    
-  //   //E-mail Ajax Send
-	// $("form").submit(function() { //Change
-	// 	var th = $(this);
-	// 	$.ajax({
-	// 		type: "POST",
-	// 		url: "mail.php", //Change
-	// 		data: th.serialize()
-	// 	}).done(function() {
-	// 		alert("Thank you!");
-	// 		setTimeout(function() {
-	// 			// Done Functions
-	// 			th.trigger("reset");
-	// 		}, 1000);
-	// 	});
-	// 	return false;
-	// });
-});
+  $('.button-info').on('click', function(event){
+    event.preventDefault();
+    $('.popup-container2').fadeIn(1000).css( 'display', 'flex' );
+		$("body").addClass("fixed");
+  });
+
+  $('.popup-close, .popup__thanks-close').on('click', function(event){
+    $('.popup-container2, .popup__thanks-container').fadeOut(1000);
+		$("body").removeClass("fixed");
+  });
+
+  $('.popup-container2, .popup__thanks-container').on('click', function(event){
+		if(event.target == this) {
+      $(this).fadeOut();
+			$("body").removeClass("fixed");
+		}
+  });
+
+  $('input[type="tel"]').inputmask({ "mask": "+7 (999) 999-9999" });
+}); 
