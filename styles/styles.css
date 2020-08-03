@@ -101,6 +101,7 @@ address {
     background: url(../img/bg-header.png) no-repeat;
     background-position: 101% 100%;
     background-size: auto;
+    position: relative;
 }
 .background-gray{
     background: #fbfbfb;
@@ -140,7 +141,11 @@ address {
     display: -ms-flexbox;
     display: flex;
 }
-
+.header{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
 .menu__item{
     padding: 42px 32px 0 0;
 }
@@ -288,64 +293,62 @@ address {
 .animation{
     display: inline-block;
     position: absolute;
-    background: -webkit-gradient(linear,left top, left bottom,from(#fa0891),to(#f3582e));
+    font-weight: 900;
     background: -o-linear-gradient(top,#fa0891,#f3582e);
+    background: -webkit-gradient(linear,left top, left bottom,from(#fa0891),to(#f3582e));
     background: linear-gradient(to bottom,#fa0891,#f3582e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-animation-duration: 1s;
             animation-duration: 1s;
 }
-.animation__item1{
-    font-size: 48px;
+.animation__item1 {
+    font-size: 50px;
     -webkit-transform: rotate(27deg);
-        -ms-transform: rotate(27deg);
-            transform: rotate(27deg);
-    top: 132px;
-    left: 122px;
+    -ms-transform: rotate(27deg);
+    transform: rotate(27deg);
+    top: 29px;
+    left: 120px;
     -webkit-animation-name: header-animation1;
-            animation-name: header-animation1;
+    animation-name: header-animation1;
 }
 .animation__item2{
     font-size: 30px;
     -webkit-transform: rotate(-13deg);
         -ms-transform: rotate(-13deg);
             transform: rotate(-13deg);
-    top: 163px;
-    left: 779px;
+    top: 63px;
+    left: 781px;
     -webkit-animation-name: header-animation2;
             animation-name: header-animation2;
 }
 .animation__item3{
     font-size: 37.5px;
-    font-weight: bold;
     -webkit-transform: rotate(20deg);
         -ms-transform: rotate(20deg);
             transform: rotate(20deg);
-    bottom: 337px;
+    bottom: 184px;
     right: 872px;
     -webkit-animation-name: header-animation3;
             animation-name: header-animation3;
 }
 .animation__item4{
     font-size: 57px;
-    font-weight: bold;
     -webkit-transform: rotate(16deg);
         -ms-transform: rotate(16deg);
             transform: rotate(16deg);
-    left: 238px;
-    top: 360px;
+    left: 236px;
+    top: 261px;
     -webkit-animation-name: header-animation4;
             animation-name: header-animation4;
 }
 .animation__item5{
     font-size: 41px;
-    font-weight: bold;
     -webkit-transform: rotate(-22deg);
         -ms-transform: rotate(-22deg);
             transform: rotate(-22deg);
     left: 368px;
-    bottom: 205px;
+    bottom: 52px;
     -webkit-animation-name: header-animation5;
             animation-name: header-animation5;
 }
@@ -367,8 +370,8 @@ address {
         left: 397px;
     }
     100%{
-        top: 132px;
-        left: 122px;
+        top: 29px;
+        left: 120px;
     }
 }
 @keyframes header-animation1{
@@ -377,8 +380,8 @@ address {
         left: 397px;
     }
     100%{
-        top: 132px;
-        left: 122px;
+        top: 29px;
+        left: 120px;
     }
 }
 @-webkit-keyframes header-animation2{
@@ -387,8 +390,8 @@ address {
         left: 601px;
     }
     100%{   
-        top: 163px;
-        left: 779px;
+        top: 63px;
+        left: 781px;
     }
 }
 @keyframes header-animation2{
@@ -397,8 +400,8 @@ address {
         left: 601px;
     }
     100%{   
-        top: 163px;
-        left: 779px;
+        top: 63px;
+        left: 781px;
     }
 }
 @-webkit-keyframes header-animation3{
@@ -407,7 +410,7 @@ address {
         right: 1093px;
     }
     100%{
-        bottom: 337px;    
+        bottom: 184px;
         right: 872px;
     }
 }
@@ -417,7 +420,7 @@ address {
         right: 1093px;
     }
     100%{
-        bottom: 337px;    
+        bottom: 184px;
         right: 872px;
     }
 }
@@ -427,8 +430,8 @@ address {
         top: 360px; 
     }
     100%{
-        left: 238px;
-        top: 360px; 
+        left: 236px;
+        top: 261px;
     }
 }
 @keyframes header-animation4{
@@ -437,8 +440,8 @@ address {
         top: 360px; 
     }
     100%{
-        left: 238px;
-        top: 360px; 
+        left: 236px;
+        top: 261px;
     }
 }
 @-webkit-keyframes header-animation5{
@@ -448,7 +451,7 @@ address {
     }
     100%{
         left: 368px;
-        bottom: 205px;
+        bottom: 52px;
     }
 }
 @keyframes header-animation5{
@@ -458,7 +461,7 @@ address {
     }
     100%{
         left: 368px;
-        bottom: 205px;
+        bottom: 52px;
     }
 }
   
@@ -603,8 +606,8 @@ address {
 /* ---------slider--------- */
 
 .main-aside{
-    background: -webkit-gradient(linear,left bottom, right top,from(#ff8f5a),to(#ff2f96));
     background: -o-linear-gradient(bottom left,#ff8f5a,#ff2f96);
+    background: -webkit-gradient(linear,left bottom, right top,from(#ff8f5a),to(#ff2f96));
     background: linear-gradient(to top right,#ff8f5a,#ff2f96);
 }
 .main-aside__title {
@@ -775,8 +778,8 @@ address {
     font-size: 25px;
 }
 .fa{
-    background: -webkit-gradient(linear,left top, left bottom,from(#fa0891),to(#f3582e));
     background: -o-linear-gradient(top,#fa0891,#f3582e);
+    background: -webkit-gradient(linear,left top, left bottom,from(#fa0891),to(#f3582e));
     background: linear-gradient(to bottom,#fa0891,#f3582e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -865,8 +868,8 @@ address {
 .popup{
 	width: 500px;
 	height: 500px;
-	background: -webkit-gradient(linear,left bottom, right top,from(#ff8f5a),to(#ff2f96));
 	background: -o-linear-gradient(bottom left,#ff8f5a,#ff2f96);
+	background: -webkit-gradient(linear,left bottom, right top,from(#ff8f5a),to(#ff2f96));
 	background: linear-gradient(to top right,#ff8f5a,#ff2f96);
 	margin: 0 auto;
     padding: 1px 35px 80px 35px;
@@ -998,8 +1001,8 @@ address {
 .popup__thanks{
     width: 250px;
 	height: 250px;
-	background: -webkit-gradient(linear,left bottom, right top,from(#ff8f5a),to(#ff2f96));
 	background: -o-linear-gradient(bottom left,#ff8f5a,#ff2f96);
+	background: -webkit-gradient(linear,left bottom, right top,from(#ff8f5a),to(#ff2f96));
 	background: linear-gradient(to top right,#ff8f5a,#ff2f96);
     margin: 0 auto;
     border-radius: 10px;
@@ -1017,7 +1020,9 @@ address {
     height: 25px;
 }
 .popup__thanks-text{
-    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-size: 20px;
     color: white;
     display: -webkit-box;
@@ -1045,7 +1050,7 @@ address {
         }
         100%{
             left: 50px;
-            top: 360px; 
+            top: 261px;
         }
     }
     @keyframes header-animation4{
@@ -1055,7 +1060,7 @@ address {
         }
         100%{
             left: 50px;
-            top: 360px; 
+            top: 261px;
         }
     }
     .animation__item7 {
@@ -1086,9 +1091,9 @@ address {
     .header__info-title{
         font-size: 75px;
     }
-    .animation__item5{
+    .animation__item5 {
         left: 120px;
-        bottom: 205px;
+        bottom: 176px;
     }
     @-webkit-keyframes header-animation5{
         0%{
@@ -1097,7 +1102,7 @@ address {
         }
         100%{
             left: 120px;
-            bottom: 205px;
+            bottom: 176px;
         }
     }
     @keyframes header-animation5{
@@ -1107,7 +1112,7 @@ address {
         }
         100%{
             left: 120px;
-            bottom: 205px;
+            bottom: 176px;
         }
     }
     .animation__item3{
@@ -1282,7 +1287,7 @@ address {
     }
     .header__info {
         background: url(../img/bg-header1024.png) no-repeat;
-        background-position: 454% 185%;
+        background-position: 454% 591%;
     }
     .header__info-title {
         padding-top: 193px;
@@ -1378,8 +1383,8 @@ address {
     }
     .header-burger span{
         position: absolute;
-        background: -webkit-gradient(linear ,left top, right top ,from(#ff6e6e),to(#ff4886));
         background: -o-linear-gradient(left ,#ff6e6e,#ff4886);
+        background: -webkit-gradient(linear ,left top, right top ,from(#ff6e6e),to(#ff4886));
         background: linear-gradient(to right ,#ff6e6e,#ff4886);
         left: 0;
         width: 100%;
@@ -1402,14 +1407,14 @@ address {
     }
     .header-burger:before{
         top: -11px;
-        background: -webkit-gradient(linear ,left top, right top ,from(#ff428a),to(#ff2f96));
         background: -o-linear-gradient(left ,#ff428a,#ff2f96);
+        background: -webkit-gradient(linear ,left top, right top ,from(#ff428a),to(#ff2f96));
         background: linear-gradient(to right ,#ff428a,#ff2f96);
     }
     .header-burger:after{
         bottom: -2px;
-        background: -webkit-gradient(linear ,left top, right top ,from(#ff8f5a),to(#ff7868));
         background: -o-linear-gradient(left ,#ff8f5a,#ff7868);
+        background: -webkit-gradient(linear ,left top, right top ,from(#ff8f5a),to(#ff7868));
         background: linear-gradient(to right ,#ff8f5a,#ff7868);
     }
     .menu{
@@ -1444,33 +1449,33 @@ address {
         overflow: hidden;
     }
     .animation__item1 {
-        font-size: 53px;
-        top: 151px;
-        left: 76px;
+        font-size: 50px;
+        top: 32px;
+        left: 77px;
     }
     @-webkit-keyframes header-animation1{
         0%{
-            top: 351px;
-            left: 260px;
+            top: 300px;
+            left: 200px;
         }
         100%{
-            top: 151px;
-            left: 76px;
+            top: 32px;
+            left: 77px;
         }
     }
     @keyframes header-animation1{
         0%{
-            top: 351px;
-            left: 260px;
+            top: 300px;
+            left: 200px;
         }
         100%{
-            top: 151px;
-            left: 76px;
+            top: 32px;
+            left: 77px;
         }
     }
     .animation__item4 {
         left: 55px;
-        top: 626px;
+        top: 508px;
     }
     @-webkit-keyframes header-animation4{
         0%{
@@ -1479,7 +1484,7 @@ address {
         }
         100%{
             left: 55px;
-            top: 626px;
+            top: 508px;
         }
     }
     @keyframes header-animation4{
@@ -1489,11 +1494,11 @@ address {
         }
         100%{
             left: 55px;
-            top: 626px;
+            top: 508px;
         }
     }
     .animation__item2 {
-        top: 148px;
+        top: 28px;
         left: 887px;
     }
     @-webkit-keyframes header-animation2{
@@ -1502,7 +1507,7 @@ address {
             left: 287px;
         }
         100%{
-            top: 148px;
+            top: 28px;
             left: 887px;
         }
     }
@@ -1512,13 +1517,13 @@ address {
             left: 287px;
         }
         100%{
-            top: 148px;
+            top: 28px;
             left: 887px;
         }
     }
     .animation__item5{
         left: 356px;
-        bottom: 198px;
+        bottom: 140px;
     }
     @-webkit-keyframes header-animation5{
         0%{
@@ -1527,7 +1532,7 @@ address {
         }
         100%{
             left: 356px;
-            bottom: 198px;
+            bottom: 140px;
         }
     }
     @keyframes header-animation5{
@@ -1537,11 +1542,11 @@ address {
         }
         100%{
             left: 356px;
-            bottom: 198px;
+            bottom: 140px;
         }
     }
     .animation__item3{
-        bottom: 238px;
+        bottom: 181px;
         right: 68px;
     }
     @-webkit-keyframes header-animation3{
@@ -1550,7 +1555,7 @@ address {
             right: 668px;
         }
         100%{
-            bottom: 238px;
+            bottom: 181px;
             right: 68px;
         }
     }
@@ -1560,12 +1565,13 @@ address {
             right: 668px;
         }
         100%{
-            bottom: 238px;
+            bottom: 181px;
             right: 68px;
         }
     }
     .animation__item6{
         display: block;
+        bottom: 487px;
     }
     @-webkit-keyframes header-animation6{
         0%{
@@ -1574,7 +1580,7 @@ address {
         }
         100%{
             left: 422px;
-            bottom: 543px;
+            bottom: 487px;
         }
     }
     @keyframes header-animation6{
@@ -1584,7 +1590,7 @@ address {
         }
         100%{
             left: 422px;
-            bottom: 543px;
+            bottom: 487px;
         }
     }
     .animation__item10{
@@ -1618,7 +1624,7 @@ address {
         padding-top: 10%;
     }
     .header__info {
-        background-position: 323px 149%;
+        background-position: 362px 204%;
     }
     .animation__item2 {
         top: 148px;
@@ -1667,6 +1673,32 @@ address {
             bottom: 238px;
             right: 200px;
         }
+    }
+    .button-info:hover,
+    .button-call:hover{
+        -webkit-box-shadow: none;
+                box-shadow: none;
+    }
+    .link-hover:hover{
+        color: rgb(137, 147, 173);
+        border: none;
+    }
+    .link-hover-contacts:hover{
+        color: black;
+    }
+    .socials-icon-vk:hover, 
+    .socials-icon-facebook:hover, 
+    .socials-icon-twitter:hover, 
+    .socials-icon-instagram:hover{
+        fill: rgb(137, 147, 173);
+    }
+    .to-top:hover{
+        height: 50px;
+        width: 50px;
+        right: 40px;
+        bottom: 40px;
+        -webkit-box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.08);
+                box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.08);
     }
 }
 @media (max-width: 983px){
@@ -1765,12 +1797,12 @@ address {
         display: none;
     }
     .animation__item3{
-        bottom: 647px;
-        right: 159px;
+        bottom: 946px;
+        right: 133px;
     }
     .animation__item5 {
         left: 356px;
-        bottom: 694px;
+        bottom: 1032px;
     }
     .animation__item4 {
         left: 64px;
@@ -1876,7 +1908,18 @@ address {
     .animation__item9{
         display: none;
     }
-
+    .animation__item1{
+        left: 40px;
+        top: 44px;
+    }
+    .animation__item4 {
+        left: 29px;
+        top: 285px;
+    }
+    .animation__item5 {
+        left: 241px;
+    }
+    
 }
 @media (max-width: 477px){
     .header__photo {
@@ -1942,20 +1985,22 @@ address {
     }
     .animation__item4 {
         left: 21px;
-        top: 248px;
+        top: 172px;
         font-size: 29px;
     }
     .animation__item1 {
         left: 70px;
-        top: 132px;
+        top: 32px;
         font-size: 25px;
     }
     .animation__item5 {
         left: 199px;
         font-size: 19px;
+        bottom: 770px;
     }
     .animation__item3{
         font-size: 16px;
+        bottom: 707px;
     }
     .animation__item11 {
         left: 213px;
@@ -2078,10 +2123,13 @@ address {
         display: block;
     }
     .main-aside__text{
-        font-size: 16px;
-        line-height: 1.86;
+        font-size: 15px;
+        line-height: 1.95;
         text-align: left;
         padding-bottom: 44px;
+    }
+    .br__aside-text-none{
+        display: none;
     }
     .footer__left{
         padding-top: 47px;
@@ -2127,15 +2175,15 @@ address {
     }
     .animation__item4 {
         left: 36px;
-        top: 203px;
+        top: 86px;
     }
     .animation__item1 {
         left: 50px;
-        top: 98px;
+        top: -18px;
     }
     .animation__item5 {
         left: 173px;
-        bottom: 724px;
+        bottom: 547px;
         font-size: 19px;
         -webkit-transform: rotate(-31deg);
             -ms-transform: rotate(-31deg);
@@ -2143,7 +2191,7 @@ address {
     }
     .animation__item3 {
         right: 37px;
-        bottom: 665px;
+        bottom: 486px;
     }
     .animation__item11{
         display: none;

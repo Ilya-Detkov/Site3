@@ -82,9 +82,9 @@ $(document).ready(function(){
 			url: "mail.php", 
 			data: th.serialize()
 		}).done(() => {
-
       th.trigger('reset');
-    
+      $('.popup-container').fadeOut(700);
+      $('.popup__thanks-container').fadeIn(1000).css( 'display', 'flex' );
 		});
 		return false;
   });
