@@ -74,7 +74,7 @@ $(document).ready(function(){
   window.onscroll = magic;
 
 
-
+  
 	$(".popup").submit(function() { 
 		var th = $(this);
 		$.ajax({
