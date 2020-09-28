@@ -948,7 +948,8 @@ address {
 	width: 100%;
 	height: 51px;
 	background-color: #ffffff;
-	border: 1px solid #31293c;
+    color: rgb(245, 63, 79);
+    border: 1px solid rgb(245, 63, 79);
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -958,7 +959,6 @@ address {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	color: black;
 	font-size: 16px;
 	font-weight: 500;
     text-transform: uppercase;
@@ -1844,6 +1844,9 @@ address {
     }
     .animation__item11 {
         left: 407px;
+    }
+    .popup-container, .popup-container2{
+        overflow: scroll;
     }
 }
 @media (max-width: 600px){
